@@ -1,0 +1,18 @@
+@font-face{
+    src: url(../../fonts/Pokemon\ Solid.ttf);
+    font-family: pokemon;
+}
+
+
+#titulo{
+    font-family: pokemon;
+    color: #ffffff;
+    font-size: 90px;
+}
+
+#header{
+    background: #a42826;
+    
+}
+
+

@@ -1,0 +1,12 @@
+#card:hover{
+    width: 230px;
+    transition: width 1s;
+}
+#card{
+    background-color: aqua;
+    width: 200px;
+    background: rgba(255,255,255,0.7);
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+}
+
