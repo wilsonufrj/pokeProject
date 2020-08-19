@@ -38,8 +38,8 @@ async function GetPokemons(url) {
         let aux = await monster(data)
         return aux 
     }
-    finally {
-        console.log('Eh so o finally')
+    catch(err){
+        return err
     }
 }
 
@@ -50,16 +50,15 @@ const Pokemon = () => {
         loading: true,
         data: {},
     })
+
     useEffect(() => {
-        
-        dispatch({ type: 'LOADING' })
-        let _aux = GetPokemons(PokeURL)
-        _aux.then((res)=>{
+        const _aux = GetPokemons(PokeURL)
+        if(_aux)
             dispatch({
                 type:'SUCCESS',
-                data: res
+                data: _aux
             })
-        })
+        
     }, [])
     
     return data

@@ -5,30 +5,24 @@ import './style.css'
 import NavBar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Pokemon from './pokeController'
-import RenderCard from '../components/Card/Card'
+//import RenderCard from '../components/Card/Card'
 
 
 
 const PokemonPage = () => {
     const data = Pokemon()
-    
     return (
-        <div className='d-flex flex-column justify-content-between bg-dark ' >
-            <header className='mb-2' >
-                <NavBar />
-            </header>
-
-            <div className='container-fluid mt-2 bg-dark'>
-                <div className='row'>
-                    {
-                        data.loading ?<p>Loading ...</p> :
-                         data.data.map((res,index)=>RenderCard(res.data,index))
-                    }
-                </div>
+        <div className='mainPage' >
+            <div className='boxMainPage'>
+                <NavBar/>
             </div>
 
-            <footer className='container-fluid'>
-                <Footer />
+            <div className='boxMainPage'>
+                <p>body</p>
+            </div>
+
+            <footer className='boxMainPage'>
+                <Footer/>
             </footer>
 
         </div>

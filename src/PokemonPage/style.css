@@ -1,1 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
 
+.mainPage{
+    height: 100vh;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #343a40;
+}

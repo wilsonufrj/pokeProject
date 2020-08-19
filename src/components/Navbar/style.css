@@ -4,15 +4,49 @@
 }
 
 
-#titulo{
+.titulo{
     font-family: pokemon;
     color: #ffffff;
     font-size: 90px;
 }
 
-#header{
+.header{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
     background: #a42826;
-    
 }
+
+.header .brand{
+    display: flex;
+    flex-direction: row;
+}
+
+.header .brand img{
+    width: 10em;
+    height: 10em;
+    margin-right: 20px;
+}
+
+.header .search{
+    align-self: flex-end;
+    padding: 2px;
+    align-items: center;
+}
+
+.header .search input{
+    background-color: white;
+    background-image: url('../../assets/lupa.png');
+    background-position: 8px 2px; 
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-left: 45px;
+    height: 32px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+
 
 
