@@ -5,7 +5,7 @@ import './style.css'
 import NavBar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Pokemon from './pokeController'
-//import RenderCard from '../components/Card/Card'
+import RenderCard from '../components/Card/Card'
 
 
 
@@ -13,15 +13,19 @@ const PokemonPage = () => {
     const data = Pokemon()
     return (
         <div className='mainPage' >
-            <div className='boxMainPage'>
+            <div>
                 <NavBar/>
             </div>
 
             <div className='boxMainPage'>
-                <p>body</p>
+                {data.loading? <div className="spinner-border text-light" role="status">
+                <span className="sr-only">Loading...</span>
+              </div> :
+                    data.data.map((value,index)=>RenderCard(value.data,index))
+                }
             </div>
 
-            <footer className='boxMainPage'>
+            <footer>
                 <Footer/>
             </footer>
 

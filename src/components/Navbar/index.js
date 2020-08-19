@@ -2,6 +2,9 @@ import React from 'react'
 import './style.css'
 import logo from './logo2.png'
 
+const nextPage =()=>{
+
+}
 
 const NavBar = () => {
     return (
@@ -13,8 +16,12 @@ const NavBar = () => {
             <div className='search'>
                 <form>
                     <input type='text' placeholder='Search a Pokemon' />
-                    <button className='btn btn-dark'>Seach</button>
+                    <button className='btn btn-dark'>Search</button>
                 </form>
+            </div>
+            <div className="pagination">
+                <button>❮</button>
+                <button>❯</button>
             </div>
         </div>
     )

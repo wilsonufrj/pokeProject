@@ -1,12 +1,32 @@
 #card:hover{
-    width: 230px;
     transition: width 1s;
 }
-#card{
-    background-color: aqua;
-    width: 200px;
+.cardPersonal{
+    width: 160px;
+    height: 270px;
     background: rgba(255,255,255,0.7);
     transition-timing-function: ease-in-out;
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px 0px;
 }
+
+
+
+.cardPersonal img{
+    width: 100%;
+    height: 180px;
+}
+
+.cardPersonal button{
+    align-self: stretch;
+    margin: 13px;
+}
+
+
+
 
