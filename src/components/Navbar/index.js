@@ -2,9 +2,6 @@ import React from 'react'
 import './style.css'
 import logo from './logo2.png'
 
-const nextPage =()=>{
-
-}
 
 const NavBar = () => {
     return (
