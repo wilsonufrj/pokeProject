@@ -1,14 +1,12 @@
-import { createStore,combineReducers } from "redux"
+import { combineReducers, createStore} from "redux"
+import pokeReducer from "./Pokemon/PokemonReducer"
 
-import pokemonReducer from "./Pokemon/PokemonReducer"
 
-//Carregar aqui não somente o reducer com o array dos n pokemons
-//mas tambem fazer um reducer com os dados de cada pokemon
-const rootReducer =  combineReducers({
-    pokemon : pokemonReducer,
-
+const rootReducer = combineReducers({
+    pokemon:pokeReducer
 })
 
+//O createStore precisa importar os reducers como padrão
 const store = createStore(rootReducer)
 
 //Pesquisar como funciona as requisições assincronas no redux

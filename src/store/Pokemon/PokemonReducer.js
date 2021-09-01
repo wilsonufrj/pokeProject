@@ -1,23 +1,32 @@
+
 const INICIAL_STATE = {
-    type:"LOAD",
-    payload:{}
+    data:{
+        counterPokemon:4,
+        pokemons: [
+            'charmander',
+            'squirtle',
+            'bulbassauro',
+            'chicorita'
+        ]
+    }
+    
 }
 
-//Carrega os novos dados para incluir no DS store
 
-export default function(state,action){
+const pokeReducer = (state=INICIAL_STATE,action)=>{
+    
     switch(action.type){
-        case 'LOADING':
-            return INICIAL_STATE
-        case 'COMPLETE':
-            return {
+        case 'ADD_POKEMON':
+            return{
                 ...state,
-                payload:{
-                    type:"bla"
+                data:{
+                    counterPokemon: state.data.counterPokemon+1,
+                    pokemons:[...state.data.pokemons , action.pokemon]
                 }
             }
-
         default:
-            return INICIAL_STATE
+            return state;
     }
 }
+
+export default pokeReducer

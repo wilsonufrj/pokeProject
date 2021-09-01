@@ -1,42 +1,30 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
+import addPokemonAction from '../store/Pokemon/PokemonActions'
 //Apperance
 import './style.css'
 
 
 
+const PokemonPage = ()=>{
+    const data = useSelector(state => state.pokemon.data)
+    const dispatch = useDispatch()
 
-/* const PokemonPage = () => {
-    const data = Pokemon()
+     function addPokemon(){
+        dispatch(addPokemonAction('pikachu'))  
+    } 
+
     return (
-        <div className='mainPage' >
-            <div className='boxMainPage'>
-                {data.loading? <div className="spinner-border text-light" role="status">
-                <span className="sr-only">Loading...</span>
-              </div> :
-                    data.data.map((value,index)=>RenderCard(value.data,index))
-                }
-            </div>
-
-
-        </div>
-
-    )
-
-} */
-
-const PokemonPage = ({pokemons})=>{
-    return(
         <div className="mainPage">
-            {pokemons}
-        </div>
-    )
+                <button
+                 onClick={addPokemon}> Adicionar Pokemon</button>
+    
+                <ul>
+                    {data.pokemons.map(pokemon=> <li key={pokemon}>{pokemon}</li>)}
+                </ul>
+               
+            </div>
+    );
 }
 
-function mapStateToProps(state){
-    return{
-        //retornar as propriedades que vão ser passadas para o componente
-    }
-}
-
-export default connect(mapStateToProps)(PokemonPage)
+export default PokemonPage
